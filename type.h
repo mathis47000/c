@@ -3,17 +3,17 @@
 
 #include <string.h>
 
-struct Type {
+typedef struct{
     int id;
     char name[20];
     int damage[18];
-};
+}Type;
 
-extern struct Type type[18];
+extern Type type[18];
 
-struct Type getType(int id);
+Type getType(int id);
 
-struct Type getTypeByName(char *name);
+Type getTypeByName(char *name);
 
 #endif
 

@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
-SRCS = main.c action.c type.c
+SRCS = main.c action.c type.c pokemon.c dresseur.c
 OBJS = $(SRCS:.c=.o)
 EXEC = main
 

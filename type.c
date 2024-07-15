@@ -1,6 +1,6 @@
 #include "type.h"
 
-struct Type type[18] = {
+Type type[18] = {
     {0, "Normal", {1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1}},
     {1, "Feu", {1, 0.5, 0.5, 1, 2, 1, 1, 1, 1, 1, 1, 2, 0.5, 1, 1, 1, 0.5, 2}},
     {2, "Eau", {1, 2, 0.5, 1, 0.5, 1, 1, 1, 2, 1, 1, 1, 2, 1, 1, 1, 1, 1}},
@@ -21,11 +21,11 @@ struct Type type[18] = {
     {17, "Fée", {1, 1, 1, 1, 1, 1, 2, 0.5, 1, 1, 1, 1, 1, 1, 1, 2, 1, 1}}
 };
 
-struct Type getType(int id) {
+Type getType(int id) {
     return type[id];
 }
 
-struct Type getTypeByName(char *name) {
+Type getTypeByName(char *name) {
     for (int i = 0; i < 18; i++) {
         if (strcmp(type[i].name, name) == 0) {
             return type[i];
