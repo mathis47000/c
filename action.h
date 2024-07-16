@@ -7,8 +7,10 @@
 #include "pokemon.h"
 #include "dresseur.h"
 
-void actionBox(char **actions, int n);
+void actionBox(char **actions, int n, char *name);
+void displayHealthBar(int health, char *name);
 void removeLines(int n);
 void combat(Pokemon* joueur, Pokemon* adversaire);
+void combatDresseur(Dresseur* joueur, Dresseur* adversaire);
 void attribuerPokemonAleatoires(Dresseur* joueur);
 #endif

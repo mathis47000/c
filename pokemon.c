@@ -29,15 +29,8 @@ Pokemon pokemons[] = {
     {"Alakazam", "Psy", {"Choc Mental", "Téléport", "Psyko", "Protection"}, "Attaque spéciale", "Insecte", 55, 50, 45, 120}
 };
 
-void afficherPokemon(Pokemon* p) {
-    printf("Nom : %s\n", p->nom);
-    printf("Type : %s\n", p->type);
-    printf("Attaques : %s, %s, %s, %s\n", p->attaques[0], p->attaques[1], p->attaques[2], p->attaques[3]);
-    printf("Points forts : %s\n", p->pointsForts);
-    printf("Points faibles : %s\n", p->pointsFaibles);
-    printf("Points de vie : %d\n", p->pointsDeVie);
-    printf("Attaque : %d\n", p->attaque);
-    printf("Défense : %d\n", p->defense);
-    printf("Vitesse : %d\n", p->vitesse);
-    printf("\n");
+void afficherPokemon(Pokemon* team) {
+    for (int i = 0; i < 6; i++) {
+        afficherPokemon(&team[i]);
+    }
 }
