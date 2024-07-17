@@ -6,6 +6,7 @@
 #include <string.h>
 #include "pokemon.h"
 #include "dresseur.h"
+#include <unistd.h>
 
 void actionBox(char **actions, int n, char *name);
 void displayHealthBar(int health, char *name);

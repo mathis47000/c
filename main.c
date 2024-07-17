@@ -11,7 +11,7 @@ int main()
     
     printf("Bienvenue dresseur !\n");
     printf("Après un long chemin et beaucoup de combats avec ton équipe pokémon,\n");
-    printf("la dernière étape de ton aventure : La ligue pokémon !\n");
+    printf("voici la dernière étape de ton aventure : La ligue pokémon !!!\n");
     srand(time(NULL));  // Initialiser le générateur de nombres aléatoires
 
     initDresseurs();  // Initialiser les équipes des dresseurs
@@ -27,5 +27,6 @@ int main()
         // Combat entre le premier Pokémon de chaque équipe
         combatDresseur(&joueur, &dresseurs[i]);
     }
+    freeDresseurs();  // Libérer la mémoire allouée pour les dresseurs
     return 0;
 }

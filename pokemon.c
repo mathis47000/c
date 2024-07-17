@@ -31,6 +31,6 @@ Pokemon pokemons[] = {
 
 void afficherPokemon(Pokemon* team) {
     for (int i = 0; i < 6; i++) {
-        afficherPokemon(&team[i]);
+        printf("[%s(%d)]",team[i].nom, team[i].pointsDeVie);
     }
 }

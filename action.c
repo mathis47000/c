@@ -51,7 +51,7 @@ void combat(Pokemon* joueur, Pokemon* adversaire) {
         actionBox(actions, 4, joueur->nom);
         int choixAttaque;
         scanf("%d", &choixAttaque);
-        // removeLines(10);
+        removeLines(10);
         choixAttaque--; // pour correspondre à l'indice du tableau
 
         printf("%s utilise %s!\n", joueur->nom, joueur->attaques[choixAttaque]);
@@ -69,6 +69,7 @@ void combat(Pokemon* joueur, Pokemon* adversaire) {
             printf("%s est KO!\n", joueur->nom);
             break;
         }
+
     }
 }
 
@@ -80,13 +81,14 @@ void combatDresseur(Dresseur* joueur, Dresseur* adversaire) {
     int currentIndiceAdversaire = 0;
     while (joueurPokemon->pointsDeVie > 0 && adversairePokemon->pointsDeVie > 0) {
         combat(joueurPokemon, adversairePokemon);
+        afficherEquipe(joueur);
+        afficherEquipe(adversaire);
         if (joueurPokemon->pointsDeVie <= 0) {
             // next pokemon
             if (currentIndiceJoueur == 5) {
                 printf("Vous avez perdu contre %s!\n", adversaire->nom);
                 break;
             }
-            printf("%d!\n", currentIndiceJoueur);
             joueurPokemon = joueur->equipe[++currentIndiceJoueur];
         }
         if (adversairePokemon->pointsDeVie <= 0) {
@@ -95,7 +97,6 @@ void combatDresseur(Dresseur* joueur, Dresseur* adversaire) {
                 printf("Vous avez battu %s!\n", adversaire->nom);
                 break;
             }
-            printf("%d!\n", currentIndiceAdversaire);
             adversairePokemon = adversaire->equipe[++currentIndiceAdversaire];
         }
     }
