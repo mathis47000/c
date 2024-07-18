@@ -12,6 +12,7 @@ void actionBox(char **actions, int n, char *name);
 void displayHealthBar(int health, char *name);
 void removeLines(int n);
 void combat(Pokemon* joueur, Pokemon* adversaire);
-void combatDresseur(Dresseur* joueur, Dresseur* adversaire);
+void combatDresseur(Dresseur* joueur, Dresseur* adversaire, int* currentIndiceJoueur);
+void afficherPokemon(Pokemon* team);
 void attribuerPokemonAleatoires(Dresseur* joueur);
 #endif

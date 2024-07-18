@@ -28,9 +28,3 @@ Pokemon pokemons[] = {
     {"Hypnomade", "Psy", {"Choc Mental", "Hypnose", "Psyko", "Protection"}, "Attaque spéciale", "Insecte", 85, 73, 70, 67},
     {"Alakazam", "Psy", {"Choc Mental", "Téléport", "Psyko", "Protection"}, "Attaque spéciale", "Insecte", 55, 50, 45, 120}
 };
-
-void afficherPokemon(Pokemon* team) {
-    for (int i = 0; i < 6; i++) {
-        printf("[%s(%d)]",team[i].nom, team[i].pointsDeVie);
-    }
-}

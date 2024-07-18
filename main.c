@@ -21,11 +21,11 @@ int main()
     attribuerPokemonAleatoires(&joueur);
     
     // Affronter chaque dresseur
+    int currentIndiceJoueur = 0;
     for (int i = 0; i < 3; i++) {
-        printf("\nVous affrontez : %s\n", dresseurs[i].nom);
-
+        printf("\n%s : %s\n", dresseurs[i].nom, dresseurs[i].phrase);
         // Combat entre le premier Pokémon de chaque équipe
-        combatDresseur(&joueur, &dresseurs[i]);
+        combatDresseur(&joueur, &dresseurs[i], &currentIndiceJoueur);
     }
     freeDresseurs();  // Libérer la mémoire allouée pour les dresseurs
     return 0;

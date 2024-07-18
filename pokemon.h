@@ -13,8 +13,6 @@ typedef struct {
     int vitesse;
 } Pokemon;
 
-void afficherPokemon(Pokemon* p);
-
 extern Pokemon pokemons[];
 
 #endif // POKEMON_H

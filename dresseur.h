@@ -12,9 +12,10 @@ typedef struct {
 } Dresseur;
 
 extern Dresseur dresseurs[];
-extern Pokemon* list;
+extern Pokemon* listDresseur1;
+extern Pokemon* listDresseur2;
+extern Pokemon* listDresseur3;
 void initDresseurs();
-void afficherEquipe(Dresseur* dresseur);
 void freeDresseurs();
 
 #endif // DRESSEUR_H
